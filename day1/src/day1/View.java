@@ -5,12 +5,32 @@ import java.util.Scanner;
 public class View {
     public static void main(String[] args) {
         Shop shop = new Shop();
-        Scanner input = new Scanner(System.in);
+
         menu();
-        int choose;
+        int choose = 0;
         while (true) {
-            System.out.print("Nhap chuc nang: ");
-            choose = input.nextInt();
+//            cách 1
+//            boolean checkinput=false;
+//            do {
+//                Scanner input = new Scanner(System.in);
+//                try {
+//                    System.out.print("Nhap chuc nang: ");
+//                    choose = input.nextInt();
+//                    checkinput=true;
+//                }catch (Exception e){
+//                    System.out.println("Chuc nang la 1 so!");
+//                }
+//            }while (!checkinput);
+            while (true) {
+                Scanner input = new Scanner(System.in);
+                try {
+                    System.out.print("Nhap chuc nang: ");
+                    choose = input.nextInt();
+                    break;
+                } catch (Exception e) {
+                    System.out.println("Chuc nang la 1 so!");
+                }
+            }
             switch (choose) {
                 case 1:
                     shop.addProduct();
@@ -27,7 +47,7 @@ public class View {
                 case 5:
                     return;
                 default:
-                    System.out.println("Nhap dung chuc nang:");
+                    System.out.println("Nhap dung chuc nang!");
                     break;
             }
         }
