@@ -5,8 +5,8 @@ import java.util.*;
 public class Repository {
     News news = new News();
     Date d = new Date(System.currentTimeMillis());
-    Scanner input = new Scanner(System.in);
     DateFormat df = new SimpleDateFormat();
+    Scanner input = new Scanner(System.in);
     Hashtable<Integer,News> newsList = new Hashtable();
     int id = 0;
 
