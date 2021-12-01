@@ -64,7 +64,7 @@ public class TestName {
                         }while (name.length()==0);
                         for (Cage cage1: zoo.cageList){
                             for (Animal animal1: cage.animalsList){
-                                if(name==animal1.name){
+                                if(name.equals(animal1.name)){
                                     zoo.cageList.get(zoo.cageList.indexOf(cage1)).removeAnimal(name);
                                     System.out.println("Đa xoa con vat thanh cong");
                                     break;
