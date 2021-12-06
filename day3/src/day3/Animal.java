@@ -1,7 +1,7 @@
 package day3;
 
 
-public abstract class Animal {
+public  class Animal {
     private long id;
     private String name;
     private int age;

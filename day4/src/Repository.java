@@ -4,8 +4,10 @@ import java.util.*;
 
 public class Repository {
     News news = new News();
+//    ngay
     Date d = new Date(System.currentTimeMillis());
-    DateFormat df = new SimpleDateFormat();
+    DateFormat df = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
+
     Scanner input = new Scanner(System.in);
     Hashtable<Integer,News> newsList = new Hashtable();
     int id = 0;
